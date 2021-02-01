@@ -19,4 +19,21 @@
         user: null,
     };
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        computers.forEach((elem) => {
+    
+            if (elem.hasOwnProperty("available") == false) {
+                elem.available = defaultProps.available;
+            }
+            if (elem.hasOwnProperty("os") == false) {
+                elem.os = defaultProps.os;
+            }
+            if (elem.hasOwnProperty("user") == false) {
+                elem.user = defaultProps.user;
+            }
+    
+            console.log(elem);
+        })
+    });
+
 })();
