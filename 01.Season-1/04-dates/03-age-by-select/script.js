@@ -16,8 +16,16 @@
         if (birthMonth>currentdate.getMonth() + 1) {
             age -= 1;
         } 
-        else if (birthMonth == currentdate.getMonth() + 1  && birthDay > currentdate.getDate() ) {
-            age += 1;
+        else if (birthMonth < currentdate.getMonth() + 1 ) {
+            age = age;
+        }
+        else if (birthMonth == currentdate.getMonth() + 1) {
+            if (birthDay < currentdate.getDate()) {
+                age = age;
+            }
+            else {
+                age -= 1;
+            }
         }
 
         alert(age + " year(s) old")
